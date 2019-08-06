@@ -11,3 +11,34 @@ puts one_string + two_string
 one_integer = 1
 puts one_integer.to_s + one_string 
 
+if "Hello" == nil
+  puts "nil"
+else
+  puts "Hello"
+end
+
+def move(input)
+  while true
+    puts "Would you like to hit or stick?"
+    
+    player_move = input
+    test = nil.to_s
+    puts test
+    if player_move == nil
+      player_move = "hmmm"
+    else
+      player_move = player_move.chomp
+    end
+    
+    puts player_move
+    
+    if player_move == "stick" || player_move == "hit" 
+      return player_move
+    else
+      break
+    end
+  end
+end
+
+puts move(nil)
+
